@@ -20,6 +20,7 @@
                 <li><a href="#downloads">Downloads</a></li>
                 <li><a href="#deliverables">Deliverables</a></li>
                 <li><a href="#repositories">Repositories</a></li>
+                <li><a href="#repositories">Timeline Doc</a></li>
             </ul>
         </nav>
     </header>
@@ -36,8 +37,9 @@
             <h2>Deliverables</h2>
             <a href="Arch1.pdf" class="button" download="ArchitectureV1">ArchitectureV1</a>
             <a href="Impl1.pdf" class="button" download="ImplementationV1">ImplementationV1</a>
-            <a href="Plan1.pdf" class="button" download="MethodPlanningV1">MethodPlanningV1</a>
+            <a href="Plan1.pdf" class="button" download="Method_PlanningV1">MethodPlanningV1</a>
             <a href="Risk1.pdf" class="button" download="RiskAssessmentV1">RiskAssessmentV1</a>
+            <a href="Timeline documentation.pdf" class="button" download="Timeline_documentationV1">Timeline_documentationV1</a>
         </section>
 
         <!-- Repositories Section -->
@@ -47,6 +49,19 @@
             <a href="https://github.com/jcbyte/longboi-life" class="button" target="_blank">Game Repo</a>
         </section>
     </main>
+     <script>
+        // JavaScript to handle toggle switch functionality
+        const versionSwitch = document.getElementById('version-switch');
+        versionSwitch.addEventListener('change', function () {
+            if (this.checked) {
+                // Redirect to Version 2
+                window.location.href = 'version2.html';
+            } else {
+                // Redirect to Version 1
+                window.location.href = 'index1.html';
+            }
+        });
+    </script>
 </body>
 
 </html>
