@@ -17,13 +17,19 @@
             <div class="switch-container">
                 <span class="switch-label">Version 1</span>
                 <label class="switch">
-                    <input type="checkbox" id="version-switch" checked>
+                    <input type="checkbox" id="version-switch">
                     <span class="slider"></span>
                 </label>
                 <span class="switch-label">Version 2</span>
             </div>
         </div>
-        
+        <nav>
+            <ul>
+                <li><a href="#downloads">Downloads</a></li>
+                <li><a href="#deliverables">Deliverables</a></li>
+                <li><a href="#repositories">Repositories</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -54,7 +60,10 @@
         // JavaScript to handle toggle switch functionality
         const versionSwitch = document.getElementById('version-switch');
         versionSwitch.addEventListener('change', function () {
-            if (!this.checked) {
+            if (this.checked) {
+                // Redirect to Version 2
+                window.location.href = 'index2.html';
+            } else {
                 // Redirect to Version 1
                 window.location.href = 'index.html';
             }
