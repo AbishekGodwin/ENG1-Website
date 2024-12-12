@@ -14,15 +14,14 @@
         <div class="logo-container">
             <img src="Images/CarbonGoose_Logo.png" id="logo" alt="Carbon Goose Logo">
             <h1>Carbon Goose</h1>
-        </div>
-         </div>
-        <div class="switch-container">
-            <span class="switch-label">Version 1</span>
-            <label class="switch">
-                <input type="checkbox" id="version-switch">
-                <span class="slider"></span>
-            </label>
-            <span class="switch-label">Version 2</span>
+            <div class="switch-container">
+                <span class="switch-label">Version 1</span>
+                <label class="switch">
+                    <input type="checkbox" id="version-switch">
+                    <span class="slider"></span>
+                </label>
+                <span class="switch-label">Version 2</span>
+            </div>
         </div>
         <nav>
             <ul>
@@ -57,16 +56,16 @@
             <a href="https://github.com/jcbyte/longboi-life" class="button" target="_blank">Game Repo</a>
         </section>
     </main>
-     <script>
+    <script>
         // JavaScript to handle toggle switch functionality
         const versionSwitch = document.getElementById('version-switch');
         versionSwitch.addEventListener('change', function () {
             if (this.checked) {
                 // Redirect to Version 2
-                window.location.href = 'version2.html';
+                window.location.href = 'index2.html';
             } else {
                 // Redirect to Version 1
-                window.location.href = 'index1.html';
+                window.location.href = 'index.html';
             }
         });
     </script>
