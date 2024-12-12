@@ -93,3 +93,59 @@ a.button:hover {
 .section-container .button {
     margin: 5px 0;
 }
+.switch-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the switch to the right of the header */
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(150, 150, 150);
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: rgb(34, 139, 34);
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+.switch-label {
+    font-size: 1rem;
+    color: white;
+    margin-right: 10px;
+}
