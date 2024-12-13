@@ -67,6 +67,10 @@ a.button:hover {
     margin-bottom: 15px;
 }
 
+#gameoverview p {
+    color: white;
+}
+
 .switch-container {
     display: flex;
     align-items: center;
@@ -94,7 +98,7 @@ a.button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(70, 130, 180);
+    background-color: rgb(34, 139, 34);
     transition: 0.4s;
     border-radius: 30px;
 }
@@ -115,18 +119,19 @@ input:checked + .slider {
     background-color: rgb(34, 139, 34);
 }
 
+input:not(:checked) + .slider {
+    background-color: rgb(70, 130, 180);
+}
+
 input:checked + .slider:before {
     transform: translateX(30px);
+}
+
+input:not(:checked) + .slider:before {
+    transform: translateX(0);
 }
 
 .switch-label {
     font-size: 1rem;
     color: white;
-}
-
-.latest-tag {
-    font-size: 0.9rem;
-    color: limegreen;
-    font-weight: bold;
-    margin-left: 10px;
 }
