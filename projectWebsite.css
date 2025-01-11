@@ -1,15 +1,9 @@
 /* Global Styles */
 body {
-    background-color: #1E1E1E; /* Dark Mode Background */
-    color: #E0E0E0; /* Light text for dark background */
+    background-color: #2C3E50; /* Charcoal Blue for the background */
+    color: #ECF0F1; /* Light text color for readability */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-}
-
-/* Light Mode Styles */
-body.light-mode {
-    background-color: #F7F7F7; /* Light background for Light Mode */
-    color: #2A2A2A; /* Dark text for light background */
 }
 
 /* Header Styling */
@@ -17,34 +11,36 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2A2A2A; /* Slightly lighter gray header */
+    background-color: #34495E; /* Dark Slate Blue header */
     padding: 10px 20px;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #ECF0F1; /* Light text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+/* Logo */
 #logo {
     height: 50px;
 }
 
+/* Headings */
 h1 {
     font-size: 1.5rem;
     margin: 0;
-    color: white;
+    color: #1ABC9C; /* Strong Teal for headings */
 }
 
 /* Buttons */
 a.button {
     display: inline-block;
     padding: 10px 15px;
-    border: 1px outset black;
+    border: 1px solid #E67E22; /* Carrot Orange border */
     border-radius: 10px;
-    color: white;
+    color: #ECF0F1; /* White text */
     text-shadow: 2px 2px black;
-    background-color: #4A90E2; /* Soft Blue Button */
+    background-color: #E67E22; /* Carrot Orange button */
     text-decoration: none;
     font-size: 1rem;
     margin: 10px;
@@ -54,27 +50,28 @@ a.button {
 
 /* Button Hover */
 a.button:hover {
-    background-color: #357ABD; /* Darker Blue on Hover */
+    background-color: #D35400; /* Dark Orange on hover */
     transform: translateY(-2px);
 }
 
 /* Section Styling */
 .section-container {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #34495E; /* Dark Slate Blue for section backgrounds */
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
 }
 
+/* Section Headings */
 .section-container h2 {
-    color: #F39C12; /* Golden Yellow for Section Titles */
+    color: #1ABC9C; /* Strong Teal for section headings */
     margin-bottom: 15px;
 }
 
-/* Section Text */
+/* Paragraph Text */
 #gameoverview p {
-    color: white;
+    color: #ECF0F1; /* White text */
 }
 
 /* Switch Container */
@@ -85,7 +82,7 @@ a.button:hover {
     margin-left: 10px;
 }
 
-/* Switch Styles */
+/* Switch Styling */
 .switch {
     position: relative;
     display: inline-block;
@@ -99,7 +96,7 @@ a.button:hover {
     height: 0;
 }
 
-/* Slider - Green when active */
+/* Slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -107,7 +104,7 @@ a.button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(34, 139, 34); /* Green */
+    background-color: #E67E22; /* Carrot Orange */
     transition: 0.4s;
     border-radius: 30px;
 }
@@ -124,17 +121,17 @@ a.button:hover {
     border-radius: 50%;
 }
 
-/* When the switch is on (active) */
+/* Switch Active */
 input:checked + .slider {
-    background-color: rgb(34, 139, 34); /* Green for active state */
+    background-color: #16A085; /* Teal when active */
 }
 
-/* When the switch is off (inactive) */
+/* Switch Inactive */
 input:not(:checked) + .slider {
-    background-color: rgb(70, 130, 180); /* Blue for inactive state */
+    background-color: #7F8C8D; /* Grayish Slate when inactive */
 }
 
-/* Slider before position */
+/* Slider Before Position */
 input:checked + .slider:before {
     transform: translateX(30px);
 }
@@ -146,33 +143,10 @@ input:not(:checked) + .slider:before {
 /* Switch Label */
 .switch-label {
     font-size: 1rem;
-    color: white;
+    color: #ECF0F1; /* White text */
 }
 
-/* Light Mode Adjustments for Sections */
-body.light-mode .section-container {
-    background-color: #FFFFFF; /* White sections in Light Mode */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter Shadow */
-}
-
-body.light-mode .section-container h2 {
-    color: #FFB84D; /* Lighter gold for Light Mode titles */
-}
-
-/* Button Adjustments in Light Mode */
-body.light-mode a.button {
-    background-color: #3498DB; /* Bright Blue for Buttons */
-}
-
-body.light-mode a.button:hover {
-    background-color: #2980B9; /* Darker Blue on Hover */
-}
-
-/* Light Mode Switch Colors */
-body.light-mode .slider {
-    background-color: rgb(70, 130, 180); /* Blue for Inactive */
-}
-
-body.light-mode input:checked + .slider {
-    background-color: rgb(34, 139, 34); /* Green for Active */
+/* Borders */
+.section-container, .button {
+    border-color: #7F8C8D; /* Grayish Slate borders */
 }
