@@ -1,26 +1,29 @@
+/* Global Styles */
 body {
-    background-color: rgb(54, 54, 54);
-    margin: 0;
+    background-color: #1E1E1E; /* Dark Mode Background */
+    color: #E0E0E0; /* Light text for dark background */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #F7F7F7; /* Light background for Light Mode */
+    color: #2A2A2A; /* Dark text for light background */
+}
+
+/* Header Styling */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(94, 94, 94);
+    background-color: #2A2A2A; /* Slightly lighter gray header */
     padding: 10px 20px;
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
 }
 
 #logo {
@@ -33,6 +36,7 @@ h1 {
     color: white;
 }
 
+/* Buttons */
 a.button {
     display: inline-block;
     padding: 10px 15px;
@@ -40,20 +44,21 @@ a.button {
     border-radius: 10px;
     color: white;
     text-shadow: 2px 2px black;
-    background-color: rgba(240, 255, 255, 0.3);
+    background-color: #4A90E2; /* Soft Blue Button */
     text-decoration: none;
     font-size: 1rem;
     margin: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease, transform 0.2s;
 }
 
+/* Button Hover */
 a.button:hover {
-    background-color: rgba(200, 215, 215, 0.3);
+    background-color: #357ABD; /* Darker Blue on Hover */
     transform: translateY(-2px);
 }
 
+/* Section Styling */
 .section-container {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px;
@@ -63,14 +68,16 @@ a.button:hover {
 }
 
 .section-container h2 {
-    color: aliceblue;
+    color: #F39C12; /* Golden Yellow for Section Titles */
     margin-bottom: 15px;
 }
 
+/* Section Text */
 #gameoverview p {
     color: white;
 }
 
+/* Switch Container */
 .switch-container {
     display: flex;
     align-items: center;
@@ -78,6 +85,7 @@ a.button:hover {
     margin-left: 10px;
 }
 
+/* Switch Styles */
 .switch {
     position: relative;
     display: inline-block;
@@ -91,6 +99,7 @@ a.button:hover {
     height: 0;
 }
 
+/* Slider - Green when active */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -98,7 +107,7 @@ a.button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(34, 139, 34);
+    background-color: rgb(34, 139, 34); /* Green */
     transition: 0.4s;
     border-radius: 30px;
 }
@@ -115,14 +124,17 @@ a.button:hover {
     border-radius: 50%;
 }
 
+/* When the switch is on (active) */
 input:checked + .slider {
-    background-color: rgb(34, 139, 34);
+    background-color: rgb(34, 139, 34); /* Green for active state */
 }
 
+/* When the switch is off (inactive) */
 input:not(:checked) + .slider {
-    background-color: rgb(70, 130, 180);
+    background-color: rgb(70, 130, 180); /* Blue for inactive state */
 }
 
+/* Slider before position */
 input:checked + .slider:before {
     transform: translateX(30px);
 }
@@ -131,7 +143,36 @@ input:not(:checked) + .slider:before {
     transform: translateX(0);
 }
 
+/* Switch Label */
 .switch-label {
     font-size: 1rem;
     color: white;
+}
+
+/* Light Mode Adjustments for Sections */
+body.light-mode .section-container {
+    background-color: #FFFFFF; /* White sections in Light Mode */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter Shadow */
+}
+
+body.light-mode .section-container h2 {
+    color: #FFB84D; /* Lighter gold for Light Mode titles */
+}
+
+/* Button Adjustments in Light Mode */
+body.light-mode a.button {
+    background-color: #3498DB; /* Bright Blue for Buttons */
+}
+
+body.light-mode a.button:hover {
+    background-color: #2980B9; /* Darker Blue on Hover */
+}
+
+/* Light Mode Switch Colors */
+body.light-mode .slider {
+    background-color: rgb(70, 130, 180); /* Blue for Inactive */
+}
+
+body.light-mode input:checked + .slider {
+    background-color: rgb(34, 139, 34); /* Green for Active */
 }
